@@ -14,6 +14,8 @@ class Comment extends Model {
 
 	protected $dates = [];
 
+	public $timestamps = false;
+
 	public static $rules = [
 		// Validation rules
 	];

@@ -21,8 +21,7 @@ $app->group(['prefix' => 'api', 'namespace' => 'App\Http\Controllers'], function
     // Routes for resource bookmark
     $app->get('bookmark', 'BookmarksController@getBookmark');
     $app->get('bookmark/history', 'BookmarksController@getHistory');
-    $app->post('bookmark', 'BookmarksController@add');
-    $app->put('bookmark/{id}', 'BookmarksController@put');
+    $app->post('bookmark', 'BookmarksController@postBookmark');
     $app->delete('bookmark/{id}', 'BookmarksController@deleteBookmark');
 
     // Routes for resource comment
