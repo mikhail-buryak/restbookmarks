@@ -11,6 +11,13 @@ If you use docker, clone, build and run case.
 
 You can also put contents of a [application folder](https://bitbucket.org/mikhail-buryak/restbookmarks/src/6aaef0df030e03d2f8bbe08a0cb0c64c3e873f84/development/app/?at=master), in to domain folder on your server.
 
+# Migration
+After deploy run artisan command in application folder for migrate-up database tables
+
+        php artisan migrate
+
+You can also put contents of a [application folder](https://bitbucket.org/mikhail-buryak/restbookmarks/src/6aaef0df030e03d2f8bbe08a0cb0c64c3e873f84/development/app/?at=master), in to domain folder on your server.
+
 # Stack
 
 * Docker
