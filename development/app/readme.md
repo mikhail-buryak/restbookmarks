@@ -1,6 +1,3 @@
-## Mikhail Buryak ##
-=================
-
 # Responses API restBookmarks
 Bookmarking service allows you to add a URL and posting comments.
 
@@ -15,28 +12,28 @@ Bookmarking service allows you to add a URL and posting comments.
 + Response 200 (application/json)
     + Body
 
-        {
-		  "id": 1,
-		  "url": "https://www.google.com",
-		  "created_at": "2016-04-20 19:58:13",
-		  "comments": [
-		    {
-		      "id": 1,
-		      "text": "For don't forget",
-		      "ip": "192.168.99.1",
-		      "created_at": "2016-04-20 19:59:00"
-		    }
-		  ]
-		}
+	        {
+			  "id": 1,
+			  "url": "https://www.google.com",
+			  "created_at": "2016-04-20 19:58:13",
+			  "comments": [
+			    {
+			      "id": 1,
+			      "text": "For don't forget",
+			      "ip": "192.168.99.1",
+			      "created_at": "2016-04-20 19:59:00"
+			    }
+			  ]
+			}
 
 + Response 400 (application/json)
     + Body
 
-        {
-		  "url": [
-		    "The selected url is invalid."
-		  ]
-		}
+	        {
+			  "url": [
+			    "The selected url is invalid."
+			  ]
+			}
 
 
 
@@ -49,25 +46,25 @@ Bookmarking service allows you to add a URL and posting comments.
 + Response 200 (application/json)
     + Body
 
-        {
-		  "id": 2
-		}
+	        {
+			  "id": 2
+			}
 
 + Response 400 (application/json)
     + Body
 
-        {
-		  "url": [
-		    "The selected url is invalid."
-		  ]
-		}
+	        {
+			  "url": [
+			    "The selected url is invalid."
+			  ]
+			}
 
 + Response 409 (application/json)
     + Body
 
-        {
-		  "id": 1
-		}
+	        {
+			  "id": 1
+			}
 
 
 
@@ -80,71 +77,71 @@ http://192.168.99.100:8000/api/bookmark/history
 + Response 200 (application/json)
     + Body
 
-		{
-		  "items": [
-		    {
-		      "id": 16,
-		      "url": "https://www.google.com/15",
-		      "created_at": "2016-04-20 20:12:03"
-		    },
-		    {
-		      "id": 15,
-		      "url": "https://www.google.com/14",
-		      "created_at": "2016-04-20 20:11:57"
-		    },
-		    {
-		      "id": 14,
-		      "url": "https://www.google.com/13",
-		      "created_at": "2016-04-20 20:11:50"
-		    },
-		    {
-		      "id": 13,
-		      "url": "https://www.google.com/12",
-		      "created_at": "2016-04-20 20:11:43"
-		    },
-		    {
-		      "id": 12,
-		      "url": "https://www.google.com/11",
-		      "created_at": "2016-04-20 20:11:38"
-		    },
-		    {
-		      "id": 11,
-		      "url": "https://www.google.com/10",
-		      "created_at": "2016-04-20 20:11:33"
-		    },
-		    {
-		      "id": 10,
-		      "url": "https://www.google.com/9",
-		      "created_at": "2016-04-20 20:11:28"
-		    },
-		    {
-		      "id": 9,
-		      "url": "https://www.google.com/8",
-		      "created_at": "2016-04-20 20:11:23"
-		    },
-		    {
-		      "id": 8,
-		      "url": "https://www.google.com/7",
-		      "created_at": "2016-04-20 20:11:17"
-		    },
-		    {
-		      "id": 7,
-		      "url": "https://www.google.com/6",
-		      "created_at": "2016-04-20 20:11:12"
-		    }
-		  ],
-		  "pagePrev": false,
-		  "pageNext": "http://192.168.99.100:8000/api/bookmark/history?offset=10"
-		}
+			{
+			  "items": [
+			    {
+			      "id": 16,
+			      "url": "https://www.google.com/15",
+			      "created_at": "2016-04-20 20:12:03"
+			    },
+			    {
+			      "id": 15,
+			      "url": "https://www.google.com/14",
+			      "created_at": "2016-04-20 20:11:57"
+			    },
+			    {
+			      "id": 14,
+			      "url": "https://www.google.com/13",
+			      "created_at": "2016-04-20 20:11:50"
+			    },
+			    {
+			      "id": 13,
+			      "url": "https://www.google.com/12",
+			      "created_at": "2016-04-20 20:11:43"
+			    },
+			    {
+			      "id": 12,
+			      "url": "https://www.google.com/11",
+			      "created_at": "2016-04-20 20:11:38"
+			    },
+			    {
+			      "id": 11,
+			      "url": "https://www.google.com/10",
+			      "created_at": "2016-04-20 20:11:33"
+			    },
+			    {
+			      "id": 10,
+			      "url": "https://www.google.com/9",
+			      "created_at": "2016-04-20 20:11:28"
+			    },
+			    {
+			      "id": 9,
+			      "url": "https://www.google.com/8",
+			      "created_at": "2016-04-20 20:11:23"
+			    },
+			    {
+			      "id": 8,
+			      "url": "https://www.google.com/7",
+			      "created_at": "2016-04-20 20:11:17"
+			    },
+			    {
+			      "id": 7,
+			      "url": "https://www.google.com/6",
+			      "created_at": "2016-04-20 20:11:12"
+			    }
+			  ],
+			  "pagePrev": false,
+			  "pageNext": "http://192.168.99.100:8000/api/bookmark/history?offset=10"
+			}
 
 + Response 400 (application/json)
     + Body
 
-		{
-		  "offset": [
-		    "The offset must be a number."
-		  ]
-		}
+			{
+			  "offset": [
+			    "The offset must be a number."
+			  ]
+			}
 
 
 
@@ -163,18 +160,18 @@ http://192.168.99.100:8000/api/bookmark/history
 + Response 200 (application/json)
     + Body
 
-		{
-		  "id": 2
-		}
+			{
+			  "id": 2
+			}
 
 + Response 400 (application/json)
     + Body
 
-		{
-		  "id": [
-		    "The selected id is invalid."
-		  ]
-		}
+			{
+			  "id": [
+			    "The selected id is invalid."
+			  ]
+			}
 
 
 ### Edit comment [{comment.id}][PUT]
@@ -187,32 +184,32 @@ http://192.168.99.100:8000/api/bookmark/history
 + Response 200 (application/json)
     + Body
 
-		{
-		  "id": 1
-		}
+			{
+			  "id": 1
+			}
 
 + Response 400 (application/json)
     + Body
 
-		{
-		  "id": [
-		    "The selected id is invalid."
-		  ]
-		}
+			{
+			  "id": [
+			    "The selected id is invalid."
+			  ]
+			}
 
 + Response 403 (application/json)
     + Body
 
-		{
-		  "message": "client ip not match"
-		}
+			{
+			  "message": "client ip not match"
+			}
 
 + Response 410 (application/json)
     + Body
 
-		{
-		  "expired_at": "2016-04-20 19:34:10"
-		}
+			{
+			  "expired_at": "2016-04-20 19:34:10"
+			}
 
 
 ### Delete comment [{comment.id}][PUT]
@@ -224,36 +221,27 @@ http://192.168.99.100:8000/api/bookmark/history
 + Response 200 (application/json)
     + Body
 
-		{}
+			{}
 
 + Response 400 (application/json)
     + Body
 
-		{
-		  "id": [
-		    "The selected id is invalid."
-		  ]
-		}
+			{
+			  "id": [
+			    "The selected id is invalid."
+			  ]
+			}
 
 + Response 403 (application/json)
     + Body
 
-		{
-		  "message": "client ip not match"
-		}
+			{
+			  "message": "client ip not match"
+			}
 
 + Response 410 (application/json)
     + Body
 
-		{
-		  "expired_at": "2016-04-20 19:34:10"
-		}
-
-
-
-**Stack**
-
-* Docker
-* Nginx
-* MySQL
-* Lumen
+			{
+			  "expired_at": "2016-04-20 19:34:10"
+			}
