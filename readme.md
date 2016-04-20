@@ -9,7 +9,7 @@ If you use docker, clone, build and run case.
         docker-compose build
         docker-compose up -d
 
-You can also put contents of a [application folder](https://bitbucket.org/mikhail-buryak/restbookmarks/src/ba216e27aa58afdf5902dd1826fde6e334af797b/development/app/?at=master), in to domain folder on your server.
+You can also put contents of a [application folder](https://bitbucket.org/mikhail-buryak/restbookmarks/src/6aaef0df030e03d2f8bbe08a0cb0c64c3e873f84/development/app/?at=master), in to domain folder on your server.
 
 **Stack**
 
