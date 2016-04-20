@@ -12,6 +12,7 @@ If you use docker, clone, build and run case.
         docker-compose build
         docker-compose up -d
 
+<<<<<<< HEAD
 You can also put contents of a [application folder](https://bitbucket.org/mikhail-buryak/restbookmarks/src/47fa60884dcca6b6ca4ba629b45e750f9786dbc8/development/app?at=master), in to domain folder on your server.
 
 **Stack**
@@ -20,3 +21,6 @@ You can also put contents of a [application folder](https://bitbucket.org/mikhai
 * Nginx
 * MySQL
 * Lumen
+=======
+You can also put contents of a [application folder](https://bitbucket.org/mikhail-buryak/restbookmarks/src/47fa60884dcca6b6ca4ba629b45e750f9786dbc8/development/app?at=master), in to domain folder on your server.
+>>>>>>> 94eaafc4c06be0adc0ee7a1c41be71bfdf0ada13
