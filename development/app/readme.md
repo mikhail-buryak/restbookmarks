@@ -69,7 +69,7 @@ Bookmarking service allows you to add a URL and posting comments.
 
 
 ### Get a history of bookmarks [/history][GET]
-http://192.168.99.100:8000/api/bookmark/history
+/api/bookmark/history
 
 + Parameters
     + offset: `10` (numeric) - Offset for take bookmarks
