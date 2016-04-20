@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Validator;
+use App\Bookmark;
 
 class BookmarksController extends Controller
 {
@@ -23,7 +24,7 @@ class BookmarksController extends Controller
 
 		$take = 10;
 		$offset = $request->input('offset');
-		$items = \App\Bookmark::orderBy('created_at', 'desc')->skip($offset)->take($take + 1)->get();
+		$items = Bookmark::orderBy('created_at', 'desc')->skip($offset)->take($take + 1)->get();
 		$itemsCount = count($items);
 		$items->forget($take);
 		$url = url($request->getPathInfo());
@@ -39,13 +40,15 @@ class BookmarksController extends Controller
 	{
 		// Check request params
 		$validator = Validator::make($request->all(), [
-			'url' => ['string', 'url']
+			'url' => ['required', 'string', 'url', 'exists:bookmarks,url']
 		]);
 
 		if ($validator->fails())
 			return response()->json($validator->errors(), 400);
 
-		return response()->json([]);
+		$bookmark = Bookmark::where('url', $request->input('url'))->with('comments')->first();
+
+		return response()->json($bookmark);
 	}
 
 }
