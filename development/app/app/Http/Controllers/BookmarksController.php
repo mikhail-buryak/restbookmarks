@@ -8,10 +8,6 @@ use App\Bookmark;
 
 class BookmarksController extends Controller
 {
-	const MODEL = "App\Bookmark";
-
-	use RESTActions;
-
 	public function getHistory(Request $request)
 	{
 		// Check request params
@@ -72,5 +68,4 @@ class BookmarksController extends Controller
 
 		return response()->json(['id' => $bookmark->id]);
 	}
-
 }

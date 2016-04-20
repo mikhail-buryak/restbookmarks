@@ -10,15 +10,7 @@ class Bookmark extends Model {
 
 	protected $hidden = ['pivot'];
 
-	protected $fillable = [];
-
-	protected $dates = [];
-
 	public $timestamps = false;
-
-	public static $rules = [
-		// Validation rules
-	];
 
 	public function comments()
 	{

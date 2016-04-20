@@ -22,12 +22,9 @@ $app->group(['prefix' => 'api', 'namespace' => 'App\Http\Controllers'], function
     $app->get('bookmark', 'BookmarksController@getBookmark');
     $app->get('bookmark/history', 'BookmarksController@getHistory');
     $app->post('bookmark', 'BookmarksController@postBookmark');
-    $app->delete('bookmark/{id}', 'BookmarksController@deleteBookmark');
 
     // Routes for resource comment
-    $app->get('comment', 'CommentsController@all');
-    $app->get('comment/{id}', 'CommentsController@get');
-    $app->post('comment', 'CommentsController@add');
-    $app->put('comment/{id}', 'CommentsController@put');
-    $app->delete('comment/{id}', 'CommentsController@remove');
+    $app->post('comment/bookmark/{id}', 'CommentsController@postComment');
+    $app->put('comment/{id}', 'CommentsController@putComment');
+    $app->delete('comment/{id}', 'CommentsController@deleteComment');
 });
