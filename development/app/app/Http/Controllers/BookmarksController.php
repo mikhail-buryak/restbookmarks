@@ -51,7 +51,7 @@ class BookmarksController extends Controller
 	{
 		// Check request params
 		$validator = Validator::make($request->all(), [
-				'url' => ['required', 'string', 'url']
+			'url' => ['required', 'string', 'url']
 		]);
 
 		if ($validator->fails())
