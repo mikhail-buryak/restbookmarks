@@ -53,4 +53,29 @@ class CommentsController extends Controller
 
 		return response()->json(['id' => $comment->id]);
 	}
+
+
+
+	public function deleteComment($id, Request $request)
+	{
+		// Check request params
+		$validator = Validator::make(['id' => $id], [
+			'id' => ['required', 'numeric', 'exists:comments'],
+		]);
+
+		if ($validator->fails())
+			return response()->json($validator->errors(), 400);
+
+		$comment = Comment::find($id);
+
+		if ($comment->created_at < date('Y-m-d H:i:s', strtotime('-1 hour')))
+			return response()->json(['expired_at' => date('Y-m-d H:i:s', strtotime($comment->created_at.'+1 hour'))], 410);
+
+		if ($comment->ip !== $request->ip())
+			return response()->json(['message' => 'client ip not match'], 403);
+
+		$comment->delete();
+
+		return response()->json(null, 200);
+	}
 }
