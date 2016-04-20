@@ -1,4 +1,4 @@
-# Responses API restBookmarks
+# API restBookmarks
 Bookmarking service allows you to add a URL and posting comments.
 
 # Deploy
